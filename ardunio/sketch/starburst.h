@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-byte readbyte();
-void writebyte(byte);
+byte readbyte(int);
+void writebyte(byte, int);
 
-byte readbit();
-void writebit(byte);
+byte readbit(int);
+void writebit(byte, int);

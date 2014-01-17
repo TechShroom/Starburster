@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "starburst.h"
+#include "fakeworld.h"
 
 byte readbyte() {
   byte b = 0;
@@ -16,10 +17,10 @@ void writebyte(byte b) {
 }
 
 /* Byte is smallest number, booleans are actually bytes */
-byte readbit() {
-  return 0; // placeholder
+byte readbit(int addr) {
+  return readfake(addr); // placeholder
 }
 
-void writebit(byte b) {
-
+void writebit(byte b, int addr) {
+  writefake(b, addr);
 }
