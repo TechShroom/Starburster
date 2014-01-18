@@ -1,1 +1,0 @@
-This is the code part of the Starburster computer, a computer that uses Starburst as its data storage mechanism. To run, just compile to your arduino, and hook it up to the machine. Don't have one? Sorry, no support there.
