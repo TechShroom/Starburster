@@ -5,8 +5,8 @@
 // and last 3 for addr 2 (0,1,10,11,100,101,110,111)
 byte fakebits[4];
 
-const int firstbits = bit(0) + bit(1);
-const int secondbits = bit(2) + bit(3) + bit(4);
+const int firstbits = bit(3) + bit(4);
+const int secondbits = bit(0) + bit(1) + bit(2);
 
 byte readfake(int addr) {
   int index = addr & firstbits, index2 = (addr & secondbits) >> 2;
