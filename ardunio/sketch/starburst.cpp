@@ -24,3 +24,7 @@ byte readbit(int addr, int addr2) {
 void writebit(byte b, int addr, int addr2) {
   writefake(b, addr, addr2);
 }
+
+int avaliablebytestacks() {
+  return size0();
+}

@@ -7,6 +7,7 @@ void setup() {
   randomSeed(analogRead(0)); // seed randomness (iff A0 is unconnected, change if not)
   pinMode(pin, OUTPUT);
   writebyte(random(127), addr);
+  Serial.println(avaliablebytestacks());
 }
 
 void loop() {

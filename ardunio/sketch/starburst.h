@@ -5,3 +5,5 @@ void writebyte(byte, int);
 
 byte readbit(int, int);
 void writebit(byte, int, int);
+
+int avaliablebytestacks();

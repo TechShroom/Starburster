@@ -2,3 +2,5 @@
 
 byte readfake(int, int);
 void writefake(byte, int, int);
+
+int size0();
