@@ -3,5 +3,5 @@
 byte readbyte(int);
 void writebyte(byte, int);
 
-byte readbit(int);
-void writebit(byte, int);
+byte readbit(int, int);
+void writebit(byte, int, int);

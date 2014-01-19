@@ -5,23 +5,22 @@
 byte readbyte(int addr) {
   byte b = 0;
   for (int i = 0; i < 8; i++) {
-    Serial.println(i);
-    b |= (readbit(addr | i) << i);
+    b |= (readbit(addr, i) << i);
   }
   return b;
 }
 
 void writebyte(byte b, int addr) {
   for (int i = 0; i < 8; i++) {
-    writebit(b & bit(i), (addr | i));
+    writebit((b & bit(i)) >> i, addr, i);
   }
 }
 
 /* Byte is smallest number, booleans are actually bytes */
-byte readbit(int addr) {
-  return readfake(addr); // placeholder
+byte readbit(int addr, int addr2) {
+  return readfake(addr, addr2); // placeholder
 }
 
-void writebit(byte b, int addr) {
-  writefake(b, addr);
+void writebit(byte b, int addr, int addr2) {
+  writefake(b, addr, addr2);
 }
