@@ -5,6 +5,7 @@
 byte readbyte(int addr) {
   byte b = 0;
   for (int i = 0; i < 8; i++) {
+    Serial.println(i);
     b |= (readbit(addr | i) << i);
   }
   return b;
