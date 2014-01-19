@@ -2,17 +2,17 @@
 #include "starburst.h"
 #include "fakeworld.h"
 
-byte readbyte() {
+byte readbyte(int addr) {
   byte b = 0;
   for (int i = 0; i < 8; i++) {
-    b |= (readbit() << i);
+    b |= (readbit(addr | i) << i);
   }
   return b;
 }
 
-void writebyte(byte b) {
+void writebyte(byte b, int addr) {
   for (int i = 0; i < 8; i++) {
-    writebit(b & bit(i));
+    writebit(b & bit(i), (addr | i));
   }
 }
 
